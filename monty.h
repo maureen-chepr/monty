@@ -47,7 +47,7 @@ void pint_opcde(stack_t **stack, unsigned int line_number);
 void pop_opcde(stack_t **stack, unsigned int line_number);
 
 /******OPCODE EXECUTION******/
-int excute_opcode(stack_t **stack, char *opcode);
+int execute_opcode(stack_t **stack, char *opcode, unsigned int line_number);
 
 /******SUPPORTING FUNCTIONS******/
 int _isdigit(int c);

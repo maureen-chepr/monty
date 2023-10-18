@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * excute_opcode - verifies opcode commands before execution
+ * execute_opcode - verifies opcode commands before execution
  * @stack: Stack or Queue
  * Return: 0 On Valid Command 1 On Command Not Found
  */

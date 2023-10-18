@@ -9,22 +9,22 @@
 
 int main(int argc, char *argv[])
 {
-	char *filepath, *comd_line, *opcode;
+	char *comd_line = NULL, *opcode;
 	FILE *file;
 	size_t size = 0;
-	int line_number = 0;
+	unsigned int line_number = 0;
+	stack_t *stack = NULL;
 
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	filepath = argv[1];
-	file = fopen(filepath, "r");
+	file = fopen(argv[1], "r");
 
 	if (file == NULL)
 	{
-		fprintf(stderr, "Error: Can't open file %s \n", filepath);
+		fprintf(stderr, "Error: Can't open file %s \n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 
@@ -35,12 +35,15 @@ int main(int argc, char *argv[])
 
 		if (opcode == NULL || strlen(opcode)== 0 )
 			continue;
-		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
-		free(comd_line);
-		fclose(file);
-		exit(EXIT_FAILURE);
+		if (execute_opcode(&stack, opcode, line_number) != 0)
+		{
+			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
+			free(comd_line);
+			fclose(file);
+			return (EXIT_FAILURE);
+		}
 	}
 	free(comd_line);
 	fclose(file);
-	return (0);
+	return (EXIT_SUCCESS);
 }
