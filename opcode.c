@@ -26,7 +26,7 @@ void push_opcde(stack_t **stack, unsigned int line_number)
 	new_el = malloc(sizeof(stack_t));
 	if (new_el == NULL)
 	{
-		fprintf(stderr, "Memory allocation error\n");
+		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 	new_el->n = value;
@@ -34,7 +34,9 @@ void push_opcde(stack_t **stack, unsigned int line_number)
 	new_el->prev = NULL;
 
 	if (*stack != NULL)
+	{
 		(*stack)->prev = new_el;
+	}
 	*stack = new_el;
 }
 
@@ -56,7 +58,7 @@ void pall_opcde(stack_t **stack, unsigned int line_number)
 	while (temp != NULL)
 	{
 		printf("%d\n", temp->n);
-		temp = temp->prev;
+		temp = temp->next;
 	}
 }
 /**
