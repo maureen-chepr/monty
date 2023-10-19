@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	char *comd_line = NULL, *opcode;
 	FILE *file;
 	size_t size = 0;
-	unsigned int line_number = 0;
+	unsigned int line_number = 1;
 	stack_t *stack = NULL;
 
 	if (argc != 2)
