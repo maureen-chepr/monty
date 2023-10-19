@@ -15,6 +15,7 @@ int execute_opcode(stack_t **stack, char *opcode, unsigned int line_number)
 		{"pint", pint_opcde},
 		{"pop", pop_opcde},
 		{"swap", swap_opcde},
+		{"add", add_opcde},
 		{NULL, NULL}
 	};
 	

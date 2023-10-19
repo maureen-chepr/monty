@@ -46,6 +46,7 @@ void pall_opcde(stack_t **stack, unsigned int line_number);
 void pint_opcde(stack_t **stack, unsigned int line_number);
 void pop_opcde(stack_t **stack, unsigned int line_number);
 void swap_opcde(stack_t **stack, unsigned int line_number);
+void add_opcde(stack_t **stack, unsigned int line_number);
 
 /******OPCODE EXECUTION******/
 int execute_opcode(stack_t **stack, char *opcode, unsigned int line_number);
