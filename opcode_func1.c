@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * add_opcde - function that swaps the top two elements of the stack
+ * add_opcde - function that adds the top two elements of the stack
  * @stack: pointer to headnode
  * @line_number: position of the line number
  * Return: void
@@ -23,4 +23,17 @@ void add_opcde(stack_t **stack, unsigned int line_number)
 	if (*stack != NULL)
 		(*stack)->prev = NULL;
 	free(temp);
+}
+
+/**
+ * nop_opcde - function that doesn’t do anything
+ * @stack: pointer to headnode
+ * @line_number: position of the line number
+ * Return: void
+ */
+
+void nop_opcde(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
 }
