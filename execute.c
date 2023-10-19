@@ -3,6 +3,8 @@
 /**
  * execute_opcode - verifies opcode commands before execution
  * @stack: Stack or Queue
+ * @opcode: the argument
+ * @line_number: position of line
  * Return: 0 On Valid Command 1 On Command Not Found
  */
 int execute_opcode(stack_t **stack, char *opcode, unsigned int line_number)
@@ -20,7 +22,6 @@ int execute_opcode(stack_t **stack, char *opcode, unsigned int line_number)
 		{"sub", sub_opcde},
 		{NULL, NULL}
 	};
-	
 	while (command[idx].opcode != NULL)
 	{
 		if (strcmp(command[idx].opcode, opcode) == 0)

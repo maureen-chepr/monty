@@ -39,7 +39,7 @@ void nop_opcde(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * sub_opcde - subtracts the top element of the stack from the second top element
+ * sub_opcde - subtracts the top element
  * @stack: pointer to head node
  * @line_number: position of the line number
  * Return: void

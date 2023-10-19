@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		line_number++;
 		opcode = strtok(comd_line, " \t\n");
 
-		if (opcode == NULL || strlen(opcode)== 0 )
+		if (opcode == NULL || strlen(opcode) == 0)
 			continue;
 		if (execute_opcode(&stack, opcode, line_number) != 0)
 		{
