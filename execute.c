@@ -20,6 +20,7 @@ int execute_opcode(stack_t **stack, char *opcode, unsigned int line_number)
 		{"add", add_opcde},
 		{"nop", nop_opcde},
 		{"sub", sub_opcde},
+		{"div", div_opcde},
 		{NULL, NULL}
 	};
 	while (command[idx].opcode != NULL)
