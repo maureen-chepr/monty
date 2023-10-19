@@ -90,3 +90,27 @@ void div_opcde(stack_t **stack, unsigned int line_number)
 		(*stack)->prev = NULL;
 	free(temp);
 }
+
+/**
+ * mul_opcde - multiplies the second top element with the top element
+ * @stack: pointer to head node
+ * @line_number: position of the line number
+ * Return: void
+ */
+void mul_opcde(stack_t **stack, unsigned int line_number)
+{
+	stack_t *temp;
+
+	if (*stack == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%u: can't mul, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	(*stack)->next->n *= (*stack)->n;
+
+	temp = *stack;
+	*stack = (*stack)->next;
+	if (*stack != NULL)
+		(*stack)->prev = NULL;
+	free(temp);
+}
