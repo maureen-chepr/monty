@@ -55,4 +55,5 @@ int execute_opcode(stack_t **stack, char *opcode, unsigned int line_number);
 /******SUPPORTING FUNCTIONS******/
 int _isdigit(int c);
 int is_number(char *str);
+int is_negative_number(char *str);
 #endif

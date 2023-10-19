@@ -30,3 +30,19 @@ int is_number(char *str)
 	}
 	return (1);
 }
+
+/**
+ * is_negative_number - function that checks if arg is -ve int
+ * @str: the input
+ * Return: 0
+ */
+
+int is_negative_number(char *str)
+{
+	if (str[0] == '-' && is_number(str + 1))
+	{
+		return (1);
+	}
+	return (0);
+}
+

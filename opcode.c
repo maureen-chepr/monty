@@ -16,7 +16,7 @@ void push_opcde(stack_t **stack, unsigned int line_number)
 	(void)line_number;
 
 	arg = strtok(NULL, " \n");
-	if (arg == NULL || !is_number(arg))
+	if (arg == NULL || (!is_number(arg) && !is_negative_number(arg)))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
