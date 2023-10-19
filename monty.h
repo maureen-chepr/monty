@@ -51,6 +51,7 @@ void nop_opcde(stack_t **stack, unsigned int line_number);
 void sub_opcde(stack_t **stack, unsigned int line_number);
 void div_opcde(stack_t **stack, unsigned int line_number);
 void mul_opcde(stack_t **stack, unsigned int line_number);
+void mod_opcde(stack_t **stack, unsigned int line_number);
 /******OPCODE EXECUTION******/
 int execute_opcode(stack_t **stack, char *opcode, unsigned int line_number);
 

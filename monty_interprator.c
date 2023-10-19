@@ -31,6 +31,8 @@ int main(int argc, char *argv[])
 	while (getline(&comd_line, &size, file) != -1)
 	{
 		line_number++;
+		if (comd_line[0] == '#')
+			continue;
 		opcode = strtok(comd_line, " \t\n");
 
 		if (opcode == NULL || strlen(opcode) == 0)
