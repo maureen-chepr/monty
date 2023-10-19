@@ -52,6 +52,11 @@ void sub_opcde(stack_t **stack, unsigned int line_number);
 void div_opcde(stack_t **stack, unsigned int line_number);
 void mul_opcde(stack_t **stack, unsigned int line_number);
 void mod_opcde(stack_t **stack, unsigned int line_number);
+void pchar_opcde(stack_t **stack, unsigned int line_number);
+void pstr_opcde(stack_t **stack, unsigned int line_number);
+void rotl_opcde(stack_t **stack, unsigned int line_number);
+void rotr_opcde(stack_t **stack, unsigned int line_number);
+
 /******OPCODE EXECUTION******/
 int execute_opcode(stack_t **stack, char *opcode, unsigned int line_number);
 
@@ -59,4 +64,5 @@ int execute_opcode(stack_t **stack, char *opcode, unsigned int line_number);
 int _isdigit(int c);
 int is_number(char *str);
 int is_negative_number(char *str);
+int is_ascii(int c);
 #endif

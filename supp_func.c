@@ -46,3 +46,13 @@ int is_negative_number(char *str)
 	return (0);
 }
 
+/**
+ * is_ascii - checks ascii value
+ * @ch: integer
+ * Return: 0
+ */
+
+int is_ascii(int c)
+{
+	return (c >= 0 && c <= 127);
+}
