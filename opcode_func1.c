@@ -84,7 +84,7 @@ void div_opcde(stack_t **stack, unsigned int line_number)
 	}
 	(*stack)->next->n /= (*stack)->n;
 
-	stack_t *temp = *stack;
+	temp = *stack;
 	*stack = (*stack)->next;
 	if (*stack != NULL)
 		(*stack)->prev = NULL;
